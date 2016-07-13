@@ -1,3 +1,6 @@
+/**
+ * 
+ */
 jQuery.githubUser = function(username, callback) {
    jQuery.getJSON('https://api.github.com/users/'+username+'/repos?callback=?',callback)
 }
@@ -19,7 +22,9 @@ jQuery.fn.loadRepositories = function(username) {
 	                list.append('<dd>' + this.description +'</dd>');
 	            }
         	}
-        });      
+        });    
+        alert(target);
+        alert(list);
       });
       
     function sortByName(repos) {
